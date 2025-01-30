@@ -92,7 +92,55 @@ def ordenar_numeros():
             for _ in range(cantidad):
                 while True:
                     try:
-                        
+
+                        numero = int(input("Ingrese un número: "))
+                    numeros.append(numero)
+                    break
+                except ValueError:
+                    print("Ingrese un valor numérico válido.")
+        numeros.sort()
+        print("Números ordenados:", numeros)
+    except ValueError:
+        print("Por favor, ingrese un número entero válido.")
+
+# Menú principal
+while True:
+    print("\nMenú de Operaciones:")
+    print("1. Suma")
+    print("2. Producto entre dos números")
+    print("3. División")
+    print("4. Factorial")
+    print("5. Tabla de multiplicar")
+    print("6. Calcular cuadrado o cubo")
+    print("7. Calcular media")
+    print("8. Ordenar números")
+    print("9. Salir")
+
+    try:
+        opcion = int(input("Seleccione una opción: "))
+        if opcion == 1:
+            suma()
+        elif opcion == 2:
+            producto()
+        elif opcion == 3:
+            division()
+        elif opcion == 4:
+            factorial()
+        elif opcion == 5:
+            tabla_multiplicar()
+        elif opcion == 6:
+            calcular_potencia()
+        elif opcion == 7:
+            calcular_media()
+        elif opcion == 8:
+            ordenar_numeros()
+        elif opcion == 9:
+            print("Gracias por usar el programa. ¡Adiós!")
+            break
+        else:
+            print("Por favor, seleccione una opción válida.")
+    except ValueError:
+        print("Por favor, ingrese un número entero válido.")
             
      
       
