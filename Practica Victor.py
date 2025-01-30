@@ -57,6 +57,42 @@ def calcular_potencia():
             num = float(input("Ingrese el numero:"))
             exponente = 2 if opcion == 1 else 3
             print(f"El resultado de {num}^{exponente} es: {math.pow(num,exponente)}")
+
+else:
+print("Por favor, seleccione una opcion valida.")
+            except ValueError:
+print("Por favor, ingrese valores numericos validos.")
+
+def calcular_media():
+    try:
+        cantidad = int(input("ingrese la cantidad de numeros:"))
+        if cantidad <= 0:
+            print("La cantidad debe ser un numero positivo.")
+            return
+            suma = 0
+            for _ in range(cantidad):
+                while True:
+                    try:
+                        numero = float(input("ingrese un numero:"))
+                        suma += numero
+                        break
+                    except ValueError:
+                        print("Ingrese un numero valido.")
+                        print(f"La media es: {suma / cantidad}")
+                    except ValueError:
+                        print("Por favor, ingrese un numero entero valido.")
+
+def ordenar_numeros():
+    try:
+        cantidad = int(input("Ingrese la cantidad de numeros a ordenar:"))
+        if cantidad <= 0:
+            print("La cantidad debe ser un numero positivo.")
+            return
+            numeros = []
+            for _ in range(cantidad):
+                while True:
+                    try:
+                        
             
      
       
